@@ -1,0 +1,51 @@
+//API-1
+GET http://localhost:3000/todos/?category=HOME
+
+
+###
+//API-2
+//Returns a specific todo based on the todo ID
+
+GET http://localhost:3000/todos/3/
+
+###
+
+//API-3
+//Returns a list of all todos with a specific
+// due date in the query parameter /agenda/?date=2021-12-12
+
+GET http://localhost:3000/agenda/?date=2021-4-2
+
+###
+
+//API-4
+//Create a todo in the todo table
+POST httP://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 6,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-02-22"
+}
+
+###
+
+//API-5
+//Updates the details of a specific todo based on the todo ID
+PUT http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{
+  "dueDate": "2021-4-12"
+}
+
+
+###
+
+//API-6
+//Deletes a todo from the todo table based on the todo ID
+DELETE http://localhost:3000/todos/6/
